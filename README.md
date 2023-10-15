@@ -96,3 +96,46 @@ bash
 flask run
 
 You should see output indicating that the application is running locally. Visit the provided URL in your web browser to access the application.
+
+
+
+
+Setting up Google Cloud
+
+pip install google-cloud-speech
+Verify Installation:
+
+You can verify that the Google Cloud libraries are installed correctly by running the following command:
+
+pip show google-cloud-speech
+ 
+
+[4:14 PM] Russell,Torie
+
+Install the Required Dialogflow Client Library:
+
+The dialogflow client library is separate from other Google Cloud libraries. You need to install it explicitly. Use the following command to install it:
+
+pip install google-cloud-dialogflow
+
+Make sure to run this command within your virtual environment if you're using one.
+
+
+Verify Your Code:
+
+Ensure that in your Python code (app.py), you're importing the dialogflow module from the google.cloud package correctly. For example:
+from google.cloud import dialogflow
+
+Verify that there are no typographical errors or syntax issues in your code.
+
+pip install google-cloud-dialogflow
+
+
+
+Install langdetect Module:
+
+You can install the langdetect module using pip. Open your terminal or command prompt and run the following command:
+
+ 
+pip install langdetect
+ 
