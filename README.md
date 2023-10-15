@@ -2,7 +2,7 @@
 Project: Multilingual Chatbot for Service Plans
 Overview:
 
-This project is a multilingual chatbot designed to assist users with information about service plans, specifically tailored for Verizon. The chatbot is built using Flask for the backend and integrates Google Cloud's Dialogflow and Vertex AI for natural language processing and understanding. The chatbot is capable of understanding and responding in both English and Spanish.
+This project is a multilingual chatbot designed to assist users with information, specifically tailored for Verizon. The chatbot is built using Flask for the backend and integrates Google Cloud's Dialogflow and Vertex AI for natural language processing and understanding. The chatbot is capable of understanding and responding in both English and Spanish.
 
 Features:
 
