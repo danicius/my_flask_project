@@ -66,7 +66,7 @@
         }
         button {
             background-color:rgb(225, 190, 213);
-            border-radius: 30px;
+            border-radius: 20px;
         }
         .textarea-container {
             display: flex;
@@ -83,6 +83,15 @@
         .intro {
             text-align: center;
         }
+        .centered-content {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the element vertically and horizontally */
+        }
+        .custom-image{
+            width: 50px;
+            height: 50px;
+        }
 
     </style>
 </head>
@@ -95,7 +104,9 @@
         <p class="intro">Welcome to Salve AI</p>
         <div id="messages"></div>
        
-        <button onclick="startDictation()">Speak</button>
+        <button onclick="startDictation()">
+            <img  class="custom-image" src="{{ url_for('static', filename='assets/mic.png') }}">
+        </button>
         <button onclick="sendMessage()">Send</button>
         <div>
             <textarea class="textarea" id="userInput" rows="4" cols="50" placeholder="Type your message..."></textarea>            
@@ -130,7 +141,7 @@
             messagesDiv.appendChild(messageDiv);
         }
 
-        function sendMessage() {
+    function sendMessage() {
     const message = document.getElementById('userInput').value;
     displayMessage(message, 'user');  // Display user's message immediately
 
@@ -153,18 +164,22 @@
 
     document.getElementById('userInput').value = '';  // Clear the input field
 }        
-</script>
+    </script>
+    
     <!-- Widget JavaScript bundle -->
-<script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+    <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
 
-<!-- Search widget element is not visible by default -->
-<gen-search-widget
-  configId="b0274afd-668e-4be1-8660-3f3025361968"
-  triggerId="searchWidgetTrigger">
-</gen-search-widget>
+    <!-- Search widget element is not visible by default -->
+    <gen-search-widget
+        configId="b0274afd-668e-4be1-8660-3f3025361968"
+        triggerId="searchWidgetTrigger">
+    </gen-search-widget>
 
-<p>Need more Assistance?</p>
-<button id="searchWidgetTrigger">Search Verizon</button>
+    <div class="centered-content">    
+        <p>Need more Assistance?</p>
+        <button id="searchWidgetTrigger">Search Verizon</button>
+    </div>
+   
 
 </body>
 
