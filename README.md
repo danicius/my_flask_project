@@ -1,4 +1,21 @@
 # SALVE AI
+Project: Multilingual Chatbot for Service Plans
+Overview:
+
+This project is a multilingual chatbot designed to assist users with information about service plans, specifically tailored for Verizon. The chatbot is built using Flask for the backend and integrates Google Cloud's Dialogflow and Vertex AI for natural language processing and understanding. The chatbot is capable of understanding and responding in both English and Spanish.
+
+Features:
+
+Speech-to-Text Integration: Users can communicate with the chatbot using voice inputs. The system transcribes the voice input into text using Google Cloud's Speech-to-Text API.
+Language Detection: The chatbot automatically detects the language of the user's input, ensuring a seamless experience for both English and Spanish-speaking users.
+Intuitive UI: An interactive chatbox UI with voice input capabilities.
+Rich Responses: The chatbot can provide detailed answers, including cards and quick replies using Dialogflow's rich response capabilities.
+Integration with Verizon Data: Through Vertex AI and Dialogflow, the chatbot provides accurate information about Verizon's service plans and billing options.
+Future Improvements:
+
+Extend support for more languages.
+Improve the accuracy and richness of responses by integrating with more data sources and refining the training data.
+Add features like account management, bill payments, and real-time support.
 
 Setting Up a Virtual Environment
 
