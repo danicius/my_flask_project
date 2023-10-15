@@ -8,13 +8,14 @@
     <script>
         window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     </script>
-   <script> src="/static/script.js"></script>
+   <script> src="/static/script.js"> </script>
 
     <style>
         #chatbox {
             max-width: 600px;
             margin: 50px auto;
             border: 1px solid #ddd;
+            border-radius: 30px;
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
@@ -53,10 +54,36 @@
         img {
             padding: 2px;
             width: 300px;
-            display: block;
+            display: flex;
             margin-left: auto;
             margin-right: auto;
         }
+        gen-search-widget {
+        /* Styles for the widget container */
+        width: 100%;
+        max-width: 6000px;
+        margin: auto;
+        }
+        button {
+            background-color:rgb(225, 190, 213);
+            border-radius: 30px;
+        }
+        .textarea-container {
+            display: flex;
+        }
+
+        .textarea {
+            flex: 1;
+            margin: 5px;
+            border-radius: 10px;
+        }
+       input{
+            border-radius: 10px;
+       }
+        .intro {
+            text-align: center;
+        }
+
     </style>
 </head>
 
@@ -65,11 +92,13 @@
     <img src="{{ url_for('static', filename='assets/girl.png') }}">
     <h1 class="title">Salve AI</h1>
     <div id="chatbox">
+        <p class="intro">Welcome to Salve AI</p>
         <div id="messages"></div>
+       
         <button onclick="startDictation()">Speak</button>
+        <button onclick="sendMessage()">Send</button>
         <div>
-            <textarea id="userInput" rows="4" placeholder="Type your message..."></textarea>
-            <button onclick="sendMessage()">Send</button>
+            <textarea class="textarea" id="userInput" rows="4" cols="50" placeholder="Type your message..."></textarea>            
         </div>
     </div>
 
@@ -123,23 +152,8 @@
     });
 
     document.getElementById('userInput').value = '';  // Clear the input field
-}
-
-        // function sendMessage() {
-        //     const message = document.getElementById('userInput').value;
-        //     displayMessage(message, 'user');
-        //     // Here, you can integrate your chatbot logic to get a response
-        //     //here i was dialogflow to response the message
-        //     const response = "hello";
-        //     displayMessage(response, 'bot');
-        
-           
-        //     //displayMessage("You said: " + message, 'bot');
-        //     document.getElementById('userInput').value = '';  // Clear the input
-        // }
-
-        
-    </script>
+}        
+</script>
     <!-- Widget JavaScript bundle -->
 <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
 
@@ -149,8 +163,8 @@
   triggerId="searchWidgetTrigger">
 </gen-search-widget>
 
-<!-- Element that opens the widget on click. It does not have to be an input -->
-<input placeholder="Search here" id="searchWidgetTrigger" />
+<p>Need more Assistance?</p>
+<button id="searchWidgetTrigger">Search Verizon</button>
 
 </body>
 
