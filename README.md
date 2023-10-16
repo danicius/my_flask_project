@@ -4,6 +4,14 @@ Overview:
 
 This project is a multilingual chatbot designed to assist users with information, specifically tailored for Verizon. The chatbot is built using Flask for the backend and integrates Google Cloud's Dialogflow and Vertex AI for natural language processing and understanding. The chatbot is capable of understanding and responding in both English and Spanish.
 
+
+
+https://www.youtube.com/watch?v=2a35cmhwvZ0
+
+
+https://github.com/danicius/my_flask_project/assets/27975058/f51efba4-efde-4995-ab15-f6a18c326204
+
+
 Features:
 
 Speech-to-Text Integration: Users can communicate with the chatbot using voice inputs. The system transcribes the voice input into text using Google Cloud's Speech-to-Text API.
